@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc78b18a-6e41-4516-a34e-f5d7246cf782" name="Changes" comment="files">
+    <list default="true" id="fc78b18a-6e41-4516-a34e-f5d7246cf782" name="Changes" comment="1st and 2nd classes on AutoTesting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Calculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CalculatorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DataProviderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DependencyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/GroupsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ParamTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PriorityTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RetryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SimpleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SimpleTest1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/StaticProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/Retry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/groups.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/parallel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/param.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +37,22 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="selenium_wd" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="testng" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,19 +73,22 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/JavaProjects/Testing/TAF_AQA18_onl/TAF_AQA18_onl/src/test/java/tests",
-    "project.structure.last.edited": "SDKs",
+    "last_opened_file_path": "E:/JavaProjects/Testing/TAF_AQA18_onl/TAF_AQA18_onl/src/test/resources",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\test\java\tests" />
       <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\test\resources" />
+      <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\main\java\configuration" />
+      <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\main\java\factory" />
+      <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\test\java\tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\test\resources" />
       <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\main\java" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -65,7 +98,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CalculatorTest.testSum10">
+  <component name="RunManager" selected="TestNG.SimpleWDTest.browserFactoryTest">
     <configuration name="CalculatorTest.testSum" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TAF_AQA18_onl" />
       <extension name="coverage">
@@ -102,27 +135,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="E:/JavaProjects/Testing/TAF_AQA18_onl/TAF_AQA18_onl/src/test/resources/groups.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TAF_AQA18_onl" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/groups.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="E:/JavaProjects/Testing/TAF_AQA18_onl/TAF_AQA18_onl/src/test/resources/parallel.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TAF_AQA18_onl" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/parallel.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RetryTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleWDTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TAF_AQA18_onl" />
       <extension name="coverage">
         <pattern>
@@ -131,8 +144,44 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RetryTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.SimpleWDTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleWDTest.advancedWDTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TAF_AQA18_onl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SimpleWDTest" />
+      <option name="METHOD_NAME" value="advancedWDTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleWDTest.browserFactoryTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TAF_AQA18_onl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SimpleWDTest" />
+      <option name="METHOD_NAME" value="browserFactoryTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -141,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SimpleWDTest.browserFactoryTest" />
+        <item itemvalue="TestNG.SimpleWDTest.advancedWDTest" />
+        <item itemvalue="TestNG.SimpleWDTest" />
         <item itemvalue="TestNG.CalculatorTest.testSum10" />
         <item itemvalue="TestNG.CalculatorTest.testSum" />
-        <item itemvalue="TestNG.RetryTest" />
-        <item itemvalue="TestNG.E:/JavaProjects/Testing/TAF_AQA18_onl/TAF_AQA18_onl/src/test/resources/groups.xml" />
-        <item itemvalue="TestNG.E:/JavaProjects/Testing/TAF_AQA18_onl/TAF_AQA18_onl/src/test/resources/parallel.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669916903325</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1st and 2nd classes on AutoTesting">
+      <created>1669917575525</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669917575525</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,21 +237,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="files" />
-    <option name="LAST_COMMIT_MESSAGE" value="files" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/DependencyTest.java</url>
-          <line>20</line>
-          <properties class="tests.DependencyTest" method="stepd">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="1st and 2nd classes on AutoTesting" />
+    <option name="LAST_COMMIT_MESSAGE" value="1st and 2nd classes on AutoTesting" />
   </component>
 </project>
