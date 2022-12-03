@@ -45,7 +45,7 @@ public class CalculatorTest extends BaseTest{
         Assert.assertEquals(calculator.sum(2, 3), 5, "неверная сумма");
     }
 
-    @Test(invocationCount = 3, invocationTimeOut = 1000, threadPoolSize = 3) //считает все выполнения как одно. pull - количество потоков
+    @Test(invocationCount = 3, invocationTimeOut = 1000, threadPoolSize = 3) //считает все выполнения как одно. pool - количество потоков
     public void testSum6() throws InterruptedException {
         Thread.sleep(500);
         Assert.assertEquals(calculator.sum(2, 3), 5, "неверная сумма");
