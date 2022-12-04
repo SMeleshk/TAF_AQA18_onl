@@ -13,7 +13,6 @@ public class CalculatorDivDoubleTest {
         Assert.assertEquals(calculator.divDouble(a, b), expected, "неверное частное");
     }
 
-
     @Test (testName = "division by |min|")
     public void testDivision2(){
         Assert.assertEquals(calculator.divDouble(1, 10E-309), 1.0E308, "неверное частное");
@@ -72,14 +71,11 @@ public class CalculatorDivDoubleTest {
     @Test (retryAnalyzer = Retry.class)
     public void retryTest() {
         double x = calculator.divDouble(1, 0);
-        if (Double.isInfinite(x) == true) {
+        if (Double.isInfinite(x)) {
             System.out.println("Success");
             Assert.assertTrue(true);
         } else {
             Assert.assertTrue(false);
         }
     }
-
-
-
 }

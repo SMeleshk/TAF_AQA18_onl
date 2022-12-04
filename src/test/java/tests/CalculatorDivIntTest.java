@@ -56,8 +56,4 @@ public class CalculatorDivIntTest {
     public void testDivisionByZero() {
         calculator.divInt(1, 0);
     }
-
-
-
-
 }
