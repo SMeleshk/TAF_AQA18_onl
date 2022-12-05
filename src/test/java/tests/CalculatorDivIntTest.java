@@ -3,7 +3,7 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CalculatorDivIntTest {
+public class CalculatorDivIntTest extends PreAndPostConditions {
 
     protected Calculator calculator = new Calculator();
 

@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Retry;
 
-public class CalculatorDivDoubleTest {
+public class CalculatorDivDoubleTest extends PreAndPostConditions {
 
     protected Calculator calculator = new Calculator();
 

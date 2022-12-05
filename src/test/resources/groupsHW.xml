@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Main Suite">
+    <test name="Group HW">
+        <groups>
+            <define name="Group 1">
+                <include name="division by zero"/>
+            </define>
+            <run>
+                <include name="Group 1"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.CalculatorDivIntTest"></class>
+            <class name="tests.CalculatorDivDoubleTest"></class>
+        </classes>
+    </test>
+</suite>

@@ -14,7 +14,7 @@ public class GroupsTest {
 
     @Test (groups = "regression")
     public void stepa(){
-        Assert.assertEquals(calculator.sum(2, 3), 6, "неверная сумма");
+        Assert.assertEquals(calculator.sum(2, 3), 5, "неверная сумма");
     }
 
     @Test  (groups = "regression")
