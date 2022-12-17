@@ -3,6 +3,8 @@
 <suite name="Main Suite">
     <parameter name="login-value" value="user_1"></parameter>
     <parameter name="psw-value" value="qwertyu"></parameter>
+    <parameter name="value1" value="2.0"></parameter>
+    <parameter name="value2" value="2.0"></parameter>
     <test name="Smoke">
         <classes>
             <class name="tests.ParamTest"/>

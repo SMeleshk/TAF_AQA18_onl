@@ -6,11 +6,11 @@ public class Calculator {
         return a + b;
     }
 
-    public int divInt (int a, int b) {
+    public int division (int a, int b) {
         return a / b;
     }
 
-    public double divDouble (double a, double b) {
+    public double division (double a, double b) {
         return a / b;
     }
 }
