@@ -3,7 +3,6 @@ package tests;
 import baseEntities.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -23,7 +22,6 @@ public class DynamicControlsTest extends BaseTest {
     //Дождаться надписи “It's enabled!”
     //Проверить, что инпут enabled
 
-    Actions actions = new Actions(driver);
 
     @Test
     public void checkboxTest() {
