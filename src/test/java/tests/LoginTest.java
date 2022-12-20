@@ -3,6 +3,7 @@ package tests;
 import baseEntities.BaseTest;
 import configuration.ReadProperties;
 import factory.BrowserFactory;
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -22,17 +23,17 @@ public class LoginTest extends BaseTest {
         loginPage.getEmailInput().sendKeys(ReadProperties.username());
         loginPage.getPasswordInput().sendKeys(ReadProperties.password());
         loginPage.getLoginButton().click();
-        //same as:
-//        driver.findElement(By.id("name")).sendKeys(ReadProperties.username());
-//        driver.findElement(By.id("password")).sendKeys(ReadProperties.password());
-//        driver.findElement(By.id("button_primary")).click();
-
-//        Assert.assertTrue(driver.findElement(By.xpath("//div[contains(text(), 'All Projects')]")).isDisplayed());
         Assert.assertTrue(new DashboardPage(driver).isPageOpened());
 
     }
 
-    //@Test
+    @Test (description = "123")
+    @Issue("AQA18-12")
+    @TmsLink("TC-001")
+    @Description("Description1")
+    @Link("https://onliner.by")
+    @Link(name = "catalog", type = "mylink", url = "https://onliner.by")
+    @Severity(SeverityLevel.BLOCKER)
     public void loginSuccessfulTest() {
         Assert.assertTrue(
         userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password())
