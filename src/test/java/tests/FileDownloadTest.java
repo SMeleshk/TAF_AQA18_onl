@@ -31,6 +31,7 @@ public class FileDownloadTest {
         String downloadLink = driver.findElement(By.linkText("test.txt")).getAttribute("href");
         driver.get(downloadLink);
 
+        //это нужно обойти через ожидание циклом while, в самом цикле можно немного поспать
         Thread.sleep(500);
 
         File folder = new File(System.getProperty("user.dir"));
