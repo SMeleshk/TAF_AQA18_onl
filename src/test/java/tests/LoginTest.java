@@ -14,7 +14,7 @@ import pages.LoginPage;
 
 public class LoginTest extends BaseTest {
 
-    @Test
+    //@Test
     public void loginTest() {
         driver.get(ReadProperties.getUrl());
 
@@ -32,7 +32,7 @@ public class LoginTest extends BaseTest {
 
     }
 
-    @Test
+    //@Test
     public void loginSuccessfulTest() {
         Assert.assertTrue(
         userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password())
@@ -40,7 +40,7 @@ public class LoginTest extends BaseTest {
         );
     }
 
-    @Test
+    //@Test
     public void loginIncorrectTest() {
         Assert.assertEquals(
         userStep.loginIncorrect(ReadProperties.username(), "123qqw")

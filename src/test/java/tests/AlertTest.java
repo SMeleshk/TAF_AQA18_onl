@@ -63,4 +63,9 @@ public class AlertTest extends BaseTest {
 
         Assert.assertEquals(driver.findElement(By.id("result")).getText(), "You entered: sdfsdf");
     }
+
+    @Test
+    public void propertyTest() {
+        System.out.println("testProp");
+    }
 }
