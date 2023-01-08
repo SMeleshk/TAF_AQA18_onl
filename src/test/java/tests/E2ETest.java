@@ -87,4 +87,25 @@ public class E2ETest extends BaseTest {
     //7. Logout:
         Assert.assertTrue(userStep.logout().isPageOpened());
     }
+
+    @Test
+    public void e2eTest() {
+        userStep.login(ReadProperties.username(), ReadProperties.password());
+
+        productsStep.addFirstProductToCart();
+        productsStep.addSecondProductToCart();
+        productsStep.switchToCart();
+
+        cartStep.checkout();
+
+        checkoutStep.fillYourInformation("1", "1", "1");
+        checkoutStep.continueCheckout();
+        checkoutStep.finishShopping();
+
+        Assert.assertEquals(checkoutStep.getCompleteText(), "THANK YOU FOR YOUR ORDER");
+    }
+
+
+
+
 }
