@@ -2,18 +2,16 @@ package tests;
 
 import baseEntities.BaseTest;
 import configuration.ReadProperties;
-import factory.BrowserFactory;
 import io.qameta.allure.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.DashboardPage;
 import pages.LoginPage;
 import pages.project.AddProjectPage;
-import steps.NavigationStep;
+import pages.project.AddReportReferencesPage;
+import pages.project.AddTestCasePage;
+import steps.NavigationSteps;
 
 public class LoginTest extends BaseTest {
 
@@ -44,14 +42,6 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void loginIncorrectTest() {
-        Assert.assertEquals(
-        userStep.loginIncorrect(ReadProperties.username(), "123qqw")
-                .getErrorTextElement().getText(),
-                "Email/Login or Password is incorrect. Please try again."
-        );
-    }
-    @Test
     public void addProjectTest() {
         userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
         projectSteps.addProject("WP_01");
@@ -63,9 +53,40 @@ public class LoginTest extends BaseTest {
     @Test
     public void radioButtonTest() {
         userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
-        AddProjectPage page = new NavigationStep(driver).navigateToAddProjectPage();
-        page.getType().selectByIndex(1);
-        page.getType().selectByValue("3");
-        page.getType().selectByText("Use a single repository for all cases (recommended)");
+        AddProjectPage page = new NavigationSteps(driver).navigateToAddProjectPage();
+        page.getRadioButtonType().selectByIndex(1);
+        page.getRadioButtonType().selectByValue("3");
+        page.getRadioButtonType().selectByText("Use a single repository for all cases (recommended)");
     }
+
+    @Test
+    public void checkBoxTest() {
+        userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
+        AddProjectPage page = new NavigationSteps(driver).navigateToAddProjectPage();
+        page.getCheckBox().select();
+        page.getCheckBox().unselect();
+    }
+
+    @Test
+    public void dropDownMenuTest() {
+
+        userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
+        AddTestCasePage page = new NavigationSteps(driver).navigateToAddTestCasePage();
+        page.getSectionDropDown().selectByText("Test Cases");
+        page.getTypeDropDown().selectByText("Automated");
+        page.getTypeDropDown().selectByIndex(1);
+        page.getPriorityDropDown().selectByText("High");
+        page.getPriorityDropDown().selectByIndex(2);
+        page.getAutomationTypeDropDown().selectByText("Ranorex");
+        page.getTemplateDropDown().selectByText("Exploratory Session");
+    }
+
+    @Test
+    public void radioButtonNewTest() {
+        userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
+        AddReportReferencesPage page = new NavigationSteps(driver).navigateToReportReferencesPage();
+        page.getReferencesRadioButtons().selectByIndex(1);
+        page.getAccessRadioButtons().selectByIndex(1);
+    }
+
 }

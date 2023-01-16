@@ -7,25 +7,21 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RadioButton {
+public class DropDownMenu {
 
     private List<UIElement> uiElementList;
-    private List<String> valueList;
     private List<String> textList;
+    private UIElement dropDown;
 
-    // Продумать механизм поиска этого элемента
-    //поиск по name
-
-    public RadioButton(WebDriver driver, String attributeNameValue) {
+    public DropDownMenu(WebDriver driver, String dropDownIdValue) {
         uiElementList = new ArrayList<>();
-        valueList = new ArrayList<>();
         textList = new ArrayList<>();
-
-        for (WebElement webElement : driver.findElements(By.name(attributeNameValue))) {
+        dropDown = new UIElement(driver, driver.findElement(By.id(dropDownIdValue)));
+        dropDown.click();
+        for (WebElement webElement : dropDown.findElements(By.xpath("child::div/ul/li"))) {
             UIElement element = new UIElement(driver, webElement);
             uiElementList.add(element);
-            valueList.add(element.getAttribute("value"));
-            textList.add(element.findUIElement(By.xpath("parent::*/strong")).getText());
+            textList.add(element.getText());
         }
     }
 
@@ -33,11 +29,8 @@ public class RadioButton {
         uiElementList.get(index).click();
     }
 
-    public void selectByValue(String value) {
-        uiElementList.get(valueList.indexOf(value)).click();
-    }
-
     public void selectByText(String text) {
         uiElementList.get(textList.indexOf(text)).click();
     }
+
 }
