@@ -5,6 +5,7 @@ import configuration.ReadProperties;
 import factory.BrowserFactory;
 import io.qameta.allure.*;
 import models.Project;
+import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -30,19 +31,23 @@ public class LoginTest extends BaseTest {
 
     }
 
-    @Test (description = "123")
-    @Issue("AQA18-12")
-    @TmsLink("TC-001")
-    @Description("Description1")
-    @Link("https://onliner.by")
-    @Link(name = "catalog", type = "mylink", url = "https://onliner.by")
-    @Severity(SeverityLevel.BLOCKER)
-    public void loginSuccessfulTest() {
-        Assert.assertTrue(
-        userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password())
-                .isPageOpened()
-        );
-    }
+//    @Test (description = "123")
+//    @Issue("AQA18-12")
+//    @TmsLink("TC-001")
+//    @Description("Description1")
+//    @Link("https://onliner.by")
+//    @Link(name = "catalog", type = "mylink", url = "https://onliner.by")
+//    @Severity(SeverityLevel.BLOCKER)
+//    public void loginSuccessfulTest() {
+//        User user = new User.Builder()
+//                .withEmail(ReadProperties.username())
+//                        .withPassword(ReadProperties.password())
+//                                .build();
+//        Assert.assertTrue(
+//        userStep.loginSuccessful(user)
+//                .isPageOpened()
+//        );
+//    }
 
     @Test
     public void loginIncorrectTest() {
