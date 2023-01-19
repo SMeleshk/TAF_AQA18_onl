@@ -20,10 +20,6 @@ public class DashboardPage extends BasePage {
         }
     }
 
-    @Override
-    protected By getPageIdentifier() {
-        return headerTitleLabelLocator;
-    }
 
     public void openPageByUrl() {
         super.openPageByUrl(pagePath);

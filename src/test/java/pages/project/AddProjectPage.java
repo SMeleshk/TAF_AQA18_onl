@@ -17,10 +17,6 @@ public class AddProjectPage extends BasePage {
         super(driver);
     }
 
-    @Override
-    protected By getPageIdentifier() {
-        return null;
-    }
 
     public void openPageByUrl() {
         super.openPageByUrl(pagePath);
