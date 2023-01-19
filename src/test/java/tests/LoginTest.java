@@ -4,6 +4,7 @@ import baseEntities.BaseTest;
 import configuration.ReadProperties;
 import factory.BrowserFactory;
 import io.qameta.allure.*;
+import models.Project;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -53,8 +54,10 @@ public class LoginTest extends BaseTest {
     }
     @Test
     public void addProjectTest() {
+        Project project = new Project();
+        project.setName("WP_01");
         userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
-        projectSteps.addProject("WP_01");
+        projectSteps.addProject(project);
 
         Assert.assertEquals(driver.findElement(By.className("page_title")).getText(),
                 "WP_01");
