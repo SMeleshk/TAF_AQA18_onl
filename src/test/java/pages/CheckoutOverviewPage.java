@@ -3,6 +3,7 @@ package pages;
 import baseEntities.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class CheckoutOverviewPage extends BasePage {
 
@@ -23,8 +24,8 @@ public class CheckoutOverviewPage extends BasePage {
     }
 
     @Override
-    protected By getPageIdentifier() {
-        return pageNameLocator;
+    protected WebElement getPageIdentifier() {
+        return driver.findElement(pageNameLocator);
     }
 
     public By getFinishButtonLocator() {

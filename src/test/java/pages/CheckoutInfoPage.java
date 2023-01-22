@@ -3,6 +3,7 @@ package pages;
 import baseEntities.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class CheckoutInfoPage extends BasePage {
 
@@ -20,8 +21,8 @@ public class CheckoutInfoPage extends BasePage {
     }
 
     @Override
-    protected By getPageIdentifier() {
-        return pageNameLocator;
+    protected WebElement getPageIdentifier() {
+        return driver.findElement(pageNameLocator);
     }
 
     public By getFirstNameInputLocator() { return firstNameInputLocator; }
@@ -37,4 +38,26 @@ public class CheckoutInfoPage extends BasePage {
     public By getCancelButtonLocator() {
         return cancelButtonLocator;
     }
+
+
+    public CheckoutInfoPage firstNameInput(String firstName) {
+        driver.findElement(getFirstNameInputLocator()).sendKeys(firstName);
+        return new CheckoutInfoPage(driver);
+    }
+
+    public CheckoutInfoPage lastNameInput(String lastName) {
+        driver.findElement(getLastNameInputLocator()).sendKeys(lastName);
+        return new CheckoutInfoPage(driver);
+    }
+
+    public CheckoutInfoPage zipInput(String zip) {
+        driver.findElement(getZipInputLocator()).sendKeys(zip);
+        return new CheckoutInfoPage(driver);
+    }
+
+    public CheckoutOverviewPage continueCheckout() {
+        driver.findElement(getContinueButtonLocator()).click();
+        return new CheckoutOverviewPage(driver);
+    }
+
 }

@@ -1,6 +1,8 @@
 package steps;
 
 import baseEntities.BaseStep;
+import models.Customer;
+import models.User;
 import org.openqa.selenium.WebDriver;
 import pages.*;
 
@@ -17,26 +19,22 @@ public class CheckoutStep extends BaseStep {
         checkoutCompletePage = new CheckoutCompletePage(driver);
     }
 
-
-    //4. CHECKOUT: YOUR INFORMATION:
-    //   4.1. First name input
-    //   4.2. Last name input
-    //   4.3. Zip/Postal code name input
-    //   4.4. Continue
-    //5. CHECKOUT: OVERVIEW, payment:
-    //   5.1. Check first product
-    //   5.2. Check second product
-    //   5.3. Check Item total
-    //   5.4. Check Total
-    //   5.5. Finish
-    //6. CHECKOUT: COMPLETE!:
-    //   6.1. Check info "THANK YOU FOR YOUR ORDER"
-    //   6.2. Back home
-
     public void fillYourInformation(String firstName, String lastName, String zipCode) {
         driver.findElement(checkoutInfoPage.getFirstNameInputLocator()).sendKeys(firstName);
         driver.findElement(checkoutInfoPage.getLastNameInputLocator()).sendKeys(lastName);
         driver.findElement(checkoutInfoPage.getZipInputLocator()).sendKeys(zipCode);
+    }
+
+    public void fillYourInformation(Customer customer) {
+        driver.findElement(checkoutInfoPage.getFirstNameInputLocator()).sendKeys(customer.getFirstName());
+        driver.findElement(checkoutInfoPage.getLastNameInputLocator()).sendKeys(customer.getLastName());
+        driver.findElement(checkoutInfoPage.getZipInputLocator()).sendKeys(customer.getZipCode());
+    }
+
+    public void fillYourInformation(User user) {
+        driver.findElement(checkoutInfoPage.getFirstNameInputLocator()).sendKeys(user.getFirstName());
+        driver.findElement(checkoutInfoPage.getLastNameInputLocator()).sendKeys(user.getLastName());
+        driver.findElement(checkoutInfoPage.getZipInputLocator()).sendKeys(user.getZipCode());
     }
 
     public CheckoutOverviewPage continueCheckout() {

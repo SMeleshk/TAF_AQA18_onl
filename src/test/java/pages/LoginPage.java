@@ -1,36 +1,44 @@
 package pages;
 
 import baseEntities.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
+import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class LoginPage extends BasePage {
 
-    //блок описания локаторов для элементов
-    private final By usernameInputLocator = By.id("user-name");
-    private final By passwordInputLocator = By.id("password");
-    private final By logInButtonLocator = By.id("login-button");
+    //PageFactory
+    @FindBy(id="user-name")
+    public WebElement usernameInput;
+    @FindBy(id="password")
+    public WebElement passwordInput;
+    @FindBy(id="login-button")
+    public WebElement logInButton;
+    @FindBys({
+            @FindBy(id="user-name"),
+            @FindBy(id="password"),
+            @FindBy(id="login-button")
+    })
+    private List<WebElement> listOfElements;
 
-    //блок инициализации страницы
     public LoginPage(WebDriver driver) {
         super(driver);
     }
 
     @Override
-    protected By getPageIdentifier() {
-        return logInButtonLocator;
+    protected WebElement getPageIdentifier() {
+        return logInButton;
     }
 
-    //блок атомарных методов
-    public WebElement getUsernameInput() { return driver.findElement(usernameInputLocator);}
-    public WebElement getPasswordInput() { return driver.findElement(passwordInputLocator);}
-    public WebElement getLoginButton() { return driver.findElement(logInButtonLocator);}
 
     public void successfulLogin(String username, String password) {
-        getUsernameInput().sendKeys(username);
-        getPasswordInput().sendKeys(password);
-        getLoginButton().click();
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        logInButton.click();
     }
 
 }

@@ -3,6 +3,7 @@ package pages;
 import baseEntities.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class AnyProductPage extends BasePage {
 
@@ -13,8 +14,8 @@ public class AnyProductPage extends BasePage {
     }
 
     @Override
-    protected By getPageIdentifier() {
-        return backToProductsLocator;
+    protected WebElement getPageIdentifier() {
+        return driver.findElement(backToProductsLocator);
     }
 
     public By getBackToProductsLocator() {
