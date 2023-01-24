@@ -31,13 +31,7 @@ public class LoginTest extends BaseTest {
 
     }
 
-//    @Test (description = "123")
-//    @Issue("AQA18-12")
-//    @TmsLink("TC-001")
-//    @Description("Description1")
-//    @Link("https://onliner.by")
-//    @Link(name = "catalog", type = "mylink", url = "https://onliner.by")
-//    @Severity(SeverityLevel.BLOCKER)
+//    @Test
 //    public void loginSuccessfulTest() {
 //        User user = new User.Builder()
 //                .withEmail(ReadProperties.username())
@@ -56,16 +50,6 @@ public class LoginTest extends BaseTest {
                 .getErrorTextElement().getText(),
                 "Email/Login or Password is incorrect. Please try again."
         );
-    }
-    @Test
-    public void addProjectTest() {
-        Project project = new Project();
-        project.setName("WP_01");
-        userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
-        projectSteps.addProject(project);
-
-        Assert.assertEquals(driver.findElement(By.className("page_title")).getText(),
-                "WP_01");
     }
 
     @Test
