@@ -14,7 +14,7 @@ public class Milestone {
     @EqualsAndHashCode.Exclude //убрать это поле из сравнения
     private int id;
 
-    @NonNull //это параметр обязателен
+    @NonNull //это параметр становится обязательным
     private String name;
 
     private String references;
