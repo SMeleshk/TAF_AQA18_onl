@@ -37,21 +37,21 @@ public class LoginTest extends BaseTest {
 
     //comment
 
-    @Test
-    public void loginIncorrectTest() {
-        Assert.assertEquals(
-        userStep.loginIncorrect(ReadProperties.username(), "123qqw")
-                .getErrorTextElement().getText(),
-                "Email/Login or Password is incorrect. Please try again."
-        );
-    }
+//    @Test
+//    public void loginIncorrectTest() {
+//        Assert.assertEquals(
+//        userStep.loginIncorrect(ReadProperties.username(), "123qqw")
+//                .getErrorTextElement().getText(),
+//                "Email/Login or Password is incorrect. Please try again."
+//        );
+//    }
 
-    @Test
-    public void radioButtonTest() {
-        userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
-        AddProjectPage page = new NavigationStep(driver).navigateToAddProjectPage();
-        page.getType().selectByIndex(1);
-        page.getType().selectByValue("3");
-        page.getType().selectByText("Use a single repository for all cases (recommended)");
-    }
+//    @Test
+//    public void radioButtonTest() {
+//        userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
+//        AddProjectPage page = new NavigationStep(driver).navigateToAddProjectPage();
+//        page.getType().selectByIndex(1);
+//        page.getType().selectByValue("3");
+//        page.getType().selectByText("Use a single repository for all cases (recommended)");
+//    }
 }

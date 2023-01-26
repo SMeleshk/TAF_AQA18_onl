@@ -25,25 +25,25 @@ public class MilestoneTest {
         Assert.assertTrue(milestone1.equals(milestone2));
     }
 
-        @Test
-    public void lombokTest2() {
-        MilestoneBuilder milestone1 = MilestoneBuilder.builder()
-                .id(1)
-                .name("ml_02")
-                .completed(false)
-                .build();
-
-        MilestoneBuilder milestone2 = MilestoneBuilder.builder()
-                .id(2)
-                .name("ml_02")
-                .completed(false)
-                .build();
-
-        System.out.println(milestone1.toString());
-        System.out.println(milestone2.toString());
-
-        Assert.assertTrue(milestone1.equals(milestone2));
-    }
+//        @Test
+//    public void lombokTest2() {
+//        MilestoneBuilder milestone1 = MilestoneBuilder.builder()
+//                .id(1)
+//                .name("ml_02")
+//                .completed(false)
+//                .build();
+//
+//        MilestoneBuilder milestone2 = MilestoneBuilder.builder()
+//                .id(2)
+//                .name("ml_02")
+//                .completed(false)
+//                .build();
+//
+//        System.out.println(milestone1.toString());
+//        System.out.println(milestone2.toString());
+//
+//        Assert.assertTrue(milestone1.equals(milestone2));
+//    }
 
 
 

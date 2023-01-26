@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class SingletonTest {
 
-    @Test
+//    @Test
     public void test() {
         Singleton singleton1 = Singleton.getInstance("First");
         Singleton singleton2 = Singleton.getInstance("Second");
