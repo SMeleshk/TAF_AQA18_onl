@@ -2,16 +2,16 @@ package tests;
 
 import baseEntities.BaseTest;
 import configuration.ReadProperties;
+import models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DashboardPage;
 import pages.LoginPage;
-import pages.project.AddProjectPage;
-import steps.NavigationStep;
+
 
 public class LoginTest extends BaseTest {
 
-    //@Test
+    @Test
     public void loginTest() {
         driver.get(ReadProperties.getUrl());
 
