@@ -1,42 +1,33 @@
 package baseEntities;
 
+import com.codeborne.selenide.AssertionMode;
+import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import configuration.ReadProperties;
-import factory.BrowserFactory;
-import org.openqa.selenium.WebDriver;
-import org.testng.ITestContext;
-import org.testng.ITestResult;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
-import services.WaitsService;
-import steps.ProjectSteps;
-import steps.UserStep;
+import org.testng.annotations.BeforeSuite;
 
-@Listeners()
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+
+
 public class BaseTest {
-    protected WebDriver driver;
-    protected UserStep userStep;
-    protected WaitsService waitsService;
-    protected ProjectSteps projectSteps;
 
-    @BeforeMethod
-    public void setUp(ITestContext iTestContext) {
-        driver = new BrowserFactory().getDriver();
-        waitsService = new WaitsService(driver);
-        driver.get(ReadProperties.getUrl());
+    @BeforeSuite
+    public void setUp() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        // Solution 1
-        iTestContext.setAttribute("driver", driver);
-        // Solution 1 - Finish
-
-        userStep = new UserStep(driver);
-        projectSteps = new ProjectSteps(driver);
+        Configuration.browser = ReadProperties.browserName();
+        Configuration.baseUrl = ReadProperties.getUrl();
+        Configuration.timeout = 15000;
+        Configuration.fastSetValue = true;
+//        Configuration.assertionMode = AssertionMode.SOFT; //если ассерт упал, тест идёт дальше все равно
+//        Configuration.headless = true;
+//        Configuration.reportsFolder = "target/"; //работает на репорты JUnit
     }
 
-
     @AfterMethod
-    public void tearDown(ITestResult testResult) {
-
-        driver.quit();
+    public void tearDown() {
+        closeWebDriver();
     }
 }
