@@ -1,13 +1,12 @@
 package pages;
 
 import baseEntities.BasePage;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
-import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
 
 public class LoginPage extends BasePage {
 
@@ -18,15 +17,11 @@ public class LoginPage extends BasePage {
     public WebElement passwordInput;
     @FindBy(id="login-button")
     public WebElement logInButton;
-    @FindBys({
-            @FindBy(id="user-name"),
-            @FindBy(id="password"),
-            @FindBy(id="login-button")
-    })
-    private List<WebElement> listOfElements;
+    private Logger logger = LogManager.getLogger();
 
     public LoginPage(WebDriver driver) {
         super(driver);
+        logger.info("[Info] Page Factory pattern is used to init elements");
     }
 
     @Override
@@ -40,5 +35,4 @@ public class LoginPage extends BasePage {
         passwordInput.sendKeys(password);
         logInButton.click();
     }
-
 }

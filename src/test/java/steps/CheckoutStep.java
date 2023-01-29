@@ -3,6 +3,8 @@ package steps;
 import baseEntities.BaseStep;
 import models.Customer;
 import models.User;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import pages.*;
 
@@ -10,7 +12,7 @@ public class CheckoutStep extends BaseStep {
     private CheckoutInfoPage checkoutInfoPage;
     private CheckoutOverviewPage checkoutOverviewPage;
     private CheckoutCompletePage checkoutCompletePage;
-
+    private Logger logger = LogManager.getLogger();
     public CheckoutStep(WebDriver driver) {
         super(driver);
 
@@ -29,12 +31,14 @@ public class CheckoutStep extends BaseStep {
         driver.findElement(checkoutInfoPage.getFirstNameInputLocator()).sendKeys(customer.getFirstName());
         driver.findElement(checkoutInfoPage.getLastNameInputLocator()).sendKeys(customer.getLastName());
         driver.findElement(checkoutInfoPage.getZipInputLocator()).sendKeys(customer.getZipCode());
+        logger.info("[Info] Value Object pattern is used");
     }
 
     public void fillYourInformation(User user) {
         driver.findElement(checkoutInfoPage.getFirstNameInputLocator()).sendKeys(user.getFirstName());
         driver.findElement(checkoutInfoPage.getLastNameInputLocator()).sendKeys(user.getLastName());
         driver.findElement(checkoutInfoPage.getZipInputLocator()).sendKeys(user.getZipCode());
+        logger.info("[Info] Lombok Builder is used");
     }
 
     public CheckoutOverviewPage continueCheckout() {
