@@ -75,6 +75,7 @@ public class LoginTest extends BaseTest {
         page.getSectionDropDown().selectByText("Test Cases");
         page.getTypeDropDown().selectByText("Automated");
         page.getTypeDropDown().selectByIndex(1);
+        page.getTypeDropDown().searchAndSelectFirst("Auto");
         page.getPriorityDropDown().selectByText("High");
         page.getPriorityDropDown().selectByIndex(2);
         page.getAutomationTypeDropDown().selectByText("Ranorex");

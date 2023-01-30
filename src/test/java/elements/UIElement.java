@@ -95,7 +95,7 @@ public class UIElement implements WebElement {
         return webElement.findElement(by);
     }
 
-    public WebElement findUIElement(By by) {
+    public UIElement findUIElement(By by) {
         return new UIElement(driver,  webElement.findElement(by));
     }
 
