@@ -28,4 +28,8 @@ public class DashboardPage extends BasePage {
     public void openPageByUrl() {
         super.openPageByUrl(pagePath);
     }
+
+    public String getTitle() {
+        return waitsService.waitForVisibilityBy(headerTitleLabelLocator).getText();
+    }
 }
