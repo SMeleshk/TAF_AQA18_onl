@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<projectsList>
+    <project>
+        <name>AQA_01 Project</name>
+        <announcemet>This is description!</announcemet>
+        <isShowAnnouncement>true</isShowAnnouncement>
+        <testcases>
+            <testcaseID>1</testcaseID>
+            <testcaseID>2</testcaseID>
+            <testcaseID>3</testcaseID>
+        </testcases>
+        <empty>null</empty>
+    </project>
+</projectsList>
