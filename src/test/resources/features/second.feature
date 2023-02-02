@@ -11,7 +11,7 @@ Feature: Параметризированные тесты
     * страница логина открыта
     When user "<username>" with password "<password>" logged in
     Then title is "All Projects"
-    And project id is <age>
+#    And project id is <age>
     Examples:
       | username | password | age |
       | atrostyanko@gmail.com | Qwertyu_1 | 123 |

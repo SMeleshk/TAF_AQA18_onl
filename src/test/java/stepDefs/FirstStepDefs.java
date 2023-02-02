@@ -1,9 +1,11 @@
 package stepDefs;
 
+import baseEntities.BaseCucumberTest;
 import configuration.ReadProperties;
 import factory.BrowserFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.an.Dada;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,11 +15,15 @@ import pages.DashboardPage;
 import pages.LoginPage;
 import steps.UserStep;
 
-public class FirstStepDefs {
+public class FirstStepDefs extends BaseCucumberTest{
 
+    private BaseCucumberTest baseCucumberTest;
     private LoginPage loginPage;
     private DashboardPage dashboardPage;
-    private WebDriver driver;
+
+    public FirstStepDefs(BaseCucumberTest baseCucumberTest) {
+        this.baseCucumberTest = baseCucumberTest;
+    }
 
     @Given("открыт браузер")
     public void startBrowser() {
@@ -53,6 +59,7 @@ public class FirstStepDefs {
     @When("user {string} with password {string} logged in")
     public void userWithPasswordLoggedIn(String username, String password) {
         UserStep userStep = new UserStep(driver);
+        dashboardPage = userStep.loginSuccessful(username, password);
 
     }
 
@@ -65,6 +72,7 @@ public class FirstStepDefs {
     public void idIs(String value) {
         Assert.assertEquals(value, 123);
     }
+
 
 
 }
