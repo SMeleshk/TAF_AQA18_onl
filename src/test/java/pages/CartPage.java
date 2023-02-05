@@ -22,7 +22,7 @@ public class CartPage extends BasePage {
     }
 
     @Override
-    protected WebElement getPageIdentifier() {
+    public WebElement getPageIdentifier() {
         return driver.findElement(pageNameLocator);
     }
 

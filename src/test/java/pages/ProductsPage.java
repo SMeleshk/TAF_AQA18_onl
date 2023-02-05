@@ -41,7 +41,7 @@ public class ProductsPage extends BasePage {
     }
 
     @Override
-    protected WebElement getPageIdentifier() {
+    public WebElement getPageIdentifier() {
         return driver.findElement(pageNameLocator);
     }
 

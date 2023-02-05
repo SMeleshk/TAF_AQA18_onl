@@ -30,7 +30,7 @@ public class LoginPage extends BasePage {
     }
 
     @Override
-    protected WebElement getPageIdentifier() {
+    public WebElement getPageIdentifier() {
         return logInButton;
     }
 

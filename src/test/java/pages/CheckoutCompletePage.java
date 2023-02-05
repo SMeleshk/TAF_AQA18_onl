@@ -18,7 +18,7 @@ public class CheckoutCompletePage extends BasePage {
     }
 
     @Override
-    protected WebElement getPageIdentifier() {
+    public WebElement getPageIdentifier() {
         return driver.findElement(pageNameLocator);
     }
 

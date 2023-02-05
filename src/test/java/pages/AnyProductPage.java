@@ -14,7 +14,7 @@ public class AnyProductPage extends BasePage {
     }
 
     @Override
-    protected WebElement getPageIdentifier() {
+    public WebElement getPageIdentifier() {
         return driver.findElement(backToProductsLocator);
     }
 

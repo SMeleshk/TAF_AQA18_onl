@@ -15,7 +15,7 @@ public abstract class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    protected abstract WebElement getPageIdentifier();
+    public abstract WebElement getPageIdentifier();
 
     public void openPageByUrl(String pagePath) {
         driver.get(ReadProperties.getUrl() + pagePath);
