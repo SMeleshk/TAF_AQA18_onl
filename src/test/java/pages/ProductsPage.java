@@ -2,15 +2,11 @@ package pages;
 
 import baseEntities.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class ProductsPage extends BasePage {
 
     private final static String pagePath = "/inventory.html";
-
-    //блок описания локаторов для элементов
     private final By pageNameLocator = By.xpath("//span[text()='Products']");
-
     private final By firstProductNameLocator = By.xpath("//div[text()='Sauce Labs Backpack']");
     private final By firstProductAddButtonLocator = By.id("add-to-cart-sauce-labs-backpack");
     private final By firstProductRemoveButtonLocator = By.id("remove-sauce-labs-backpack");
@@ -35,9 +31,7 @@ public class ProductsPage extends BasePage {
     private final By cartBadgeLocator = By.className("shopping_cart_badge");
 
     //блок инициализации страницы
-    public ProductsPage(WebDriver driver) {
-        super(driver);
-    }
+
 
     @Override
     protected By getPageIdentifier() {

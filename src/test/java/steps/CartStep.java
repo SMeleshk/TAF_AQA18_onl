@@ -1,44 +1,31 @@
 package steps;
 
-import baseEntities.BaseStep;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import pages.*;
 
-public class CartStep extends BaseStep {
+import static com.codeborne.selenide.Selenide.$;
+
+public class CartStep {
     private CartPage cartPage;
 
-    public CartStep(WebDriver driver) {
-        super(driver);
-
-        cartPage = new CartPage(driver);
+    public CartStep() {
+        this.cartPage = new CartPage();
     }
 
-    // Work with cart:
-    //   3.1. Check first product
-    //   3.2. Check second product
-    //   3.3. Remove second product
-    //   3.4. Continue shopping
-    //   3.5. Add second product to cart
-    //   3.6. Switch to cart
-    //   3.7. Check first product
-    //   3.8. Check second product
-    //   3.9. Checkout
-
     public String getFirstProductName() {
-        return driver.findElement(cartPage.getFirstProductNameLocator()).getText();
+        return $(cartPage.getFirstProductNameLocator()).getText();
     }
 
     public String getSecondProductName() {
-        return driver.findElement(cartPage.getSecondProductNameLocator()).getText();
+        return $(cartPage.getSecondProductNameLocator()).getText();
     }
 
     public void removeFirstProduct() {
-        driver.findElement(cartPage.getFirstProductRemoveButtonLocator()).click();
+        $(cartPage.getFirstProductRemoveButtonLocator()).click();
     }
 
     public void removeSecondProduct() {
-        driver.findElement(cartPage.getSecondProductRemoveButtonLocator()).click();
+        $(cartPage.getSecondProductRemoveButtonLocator()).click();
     }
 
     public By getFirstProductRemoveButtonLocator() { return cartPage.getFirstProductRemoveButtonLocator(); }
@@ -46,13 +33,13 @@ public class CartStep extends BaseStep {
     public By getSecondProductRemoveButtonLocator() { return cartPage.getSecondProductRemoveButtonLocator(); }
 
     public ProductsPage continueShopping() {
-        driver.findElement(cartPage.getContinueShoppingButtonLocator()).click();
-        return new ProductsPage(driver);
+        $(cartPage.getContinueShoppingButtonLocator()).click();
+        return new ProductsPage();
     }
 
     public CheckoutInfoPage checkout() {
-        driver.findElement(cartPage.getCheckoutButtonLocator()).click();
-        return new CheckoutInfoPage(driver);
+        $(cartPage.getCheckoutButtonLocator()).click();
+        return new CheckoutInfoPage();
     }
 
 }

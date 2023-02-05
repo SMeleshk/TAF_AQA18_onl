@@ -2,7 +2,6 @@ package pages;
 
 import baseEntities.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class CartPage extends BasePage {
 
@@ -16,9 +15,6 @@ public class CartPage extends BasePage {
     private final By firstProductRemoveButtonLocator = By.id("remove-sauce-labs-backpack");
     private final By secondProductRemoveButtonLocator = By.id("remove-sauce-labs-bike-light");
 
-    public CartPage(WebDriver driver) {
-        super(driver);
-    }
 
     @Override
     protected By getPageIdentifier() {

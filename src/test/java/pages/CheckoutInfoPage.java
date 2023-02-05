@@ -2,7 +2,6 @@ package pages;
 
 import baseEntities.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class CheckoutInfoPage extends BasePage {
 
@@ -13,11 +12,6 @@ public class CheckoutInfoPage extends BasePage {
     private final By zipInputLocator = By.id("postal-code");
     private final By continueButtonLocator = By.id("continue");
     private final By cancelButtonLocator = By.id("cancel");
-
-
-    public CheckoutInfoPage(WebDriver driver) {
-        super(driver);
-    }
 
     @Override
     protected By getPageIdentifier() {

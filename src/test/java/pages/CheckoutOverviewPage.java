@@ -2,7 +2,6 @@ package pages;
 
 import baseEntities.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class CheckoutOverviewPage extends BasePage {
 
@@ -16,11 +15,6 @@ public class CheckoutOverviewPage extends BasePage {
 
     private final By itemTotalPrice = By.className("summary_subtotal_label");
     private final By totalPrice = By.className("summary_total_label");
-
-
-    public CheckoutOverviewPage(WebDriver driver) {
-        super(driver);
-    }
 
     @Override
     protected By getPageIdentifier() {
