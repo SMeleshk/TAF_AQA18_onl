@@ -2,6 +2,7 @@ package stepDefs;
 
 import configuration.ReadProperties;
 import factory.BrowserFactory;
+import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -27,6 +28,11 @@ public class E2EStepDefs {
     @Given("Browser is opened")
     public void startBrowser() {
         driver = new BrowserFactory().getDriver();
+    }
+
+    @After
+    public void tearDown() {
+        driver.quit();
     }
 
     @Given("Login Page is opened")
