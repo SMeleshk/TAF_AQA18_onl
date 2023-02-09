@@ -2,7 +2,6 @@ package tests.gui;
 
 import baseEntities.BaseTest;
 import configuration.ReadProperties;
-import models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DashboardPage;
@@ -25,7 +24,7 @@ public class LoginTest extends BaseTest {
 
 //    @Test
 //    public void loginSuccessfulTest() {
-//        User user = new User.Builder()
+//        UserGUI user = new UserGUI.Builder()
 //                .withEmail(ReadProperties.username())
 //                        .withPassword(ReadProperties.password())
 //                                .build();
