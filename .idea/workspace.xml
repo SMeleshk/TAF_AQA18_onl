@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc78b18a-6e41-4516-a34e-f5d7246cf782" name="Changes" comment="class allure">
+    <list default="true" id="fc78b18a-6e41-4516-a34e-f5d7246cf782" name="Changes" comment="Rest API HW">
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/DataBaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dao/CustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dbServices/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dbTables/CustomersTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/CustomerBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/db/SimpleDBTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/HibernateSessionFactoryUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j2-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/log4j2-test.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +47,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="maven" />
+        <entry key="$PROJECT_DIR$" value="restApi_HW" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,26 +63,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/JavaProjects/Testing/TAF_AQA18_onl/TAF_AQA18_onl/src/test/java/utils&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "E:/JavaProjects/Testing/TAF_AQA18_onl/TAF_AQA18_onl/src/test/java/dao",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\test\java\dao" />
+      <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\test\java\dbServices" />
       <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\test\java\utils" />
       <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\test\resources" />
       <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\main\java\configuration" />
-      <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\main\java\factory" />
-      <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\test\java\tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\JavaProjects\Testing\TAF_AQA18_onl\TAF_AQA18_onl\src\test\resources" />
@@ -85,53 +97,17 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginTest.loginSuccessfulTest">
-    <configuration name="AlertTest.infoAlertTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.SimpleDBTest.hibernateTest">
+    <configuration name="CasesApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TAF_AQA18_onl" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="tests.api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AlertTest" />
-      <option name="METHOD_NAME" value="infoAlertTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FrameTest.frameTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TAF_AQA18_onl" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.FrameTest" />
-      <option name="METHOD_NAME" value="frameTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TAF_AQA18_onl" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.CasesApiTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -139,17 +115,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.loginIncorrectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasesApiTest.moveCasesToSection" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TAF_AQA18_onl" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="tests.api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
-      <option name="METHOD_NAME" value="loginIncorrectTest" />
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.CasesApiTest" />
+      <option name="METHOD_NAME" value="moveCasesToSection" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -157,17 +133,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.loginSuccessfulTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleDBTest.advancedDBTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TAF_AQA18_onl" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="tests.db.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
-      <option name="METHOD_NAME" value="loginSuccessfulTest" />
+      <option name="PACKAGE_NAME" value="tests.db" />
+      <option name="MAIN_CLASS_NAME" value="tests.db.SimpleDBTest" />
+      <option name="METHOD_NAME" value="advancedDBTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleDBTest.hibernateTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TAF_AQA18_onl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.db" />
+      <option name="MAIN_CLASS_NAME" value="tests.db.SimpleDBTest" />
+      <option name="METHOD_NAME" value="hibernateTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleDBTest.simpleTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TAF_AQA18_onl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.db" />
+      <option name="MAIN_CLASS_NAME" value="tests.db.SimpleDBTest" />
+      <option name="METHOD_NAME" value="simpleTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -177,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTest.loginSuccessfulTest" />
-        <item itemvalue="TestNG.LoginTest.loginIncorrectTest" />
-        <item itemvalue="TestNG.LoginTest" />
-        <item itemvalue="TestNG.FrameTest.frameTest" />
-        <item itemvalue="TestNG.AlertTest.infoAlertTest" />
+        <item itemvalue="TestNG.SimpleDBTest.hibernateTest" />
+        <item itemvalue="TestNG.SimpleDBTest.advancedDBTest" />
+        <item itemvalue="TestNG.SimpleDBTest.simpleTest" />
+        <item itemvalue="TestNG.CasesApiTest" />
+        <item itemvalue="TestNG.CasesApiTest.moveCasesToSection" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +255,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671563544030</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Postman HW">
+      <created>1676154847987</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676154847987</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Rest API HW">
+      <created>1676239302667</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676239302667</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,6 +291,8 @@
     <MESSAGE value="HW Selenium Advanced edited2" />
     <MESSAGE value="class maven" />
     <MESSAGE value="class allure" />
-    <option name="LAST_COMMIT_MESSAGE" value="class allure" />
+    <MESSAGE value="Postman HW" />
+    <MESSAGE value="Rest API HW" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rest API HW" />
   </component>
 </project>
