@@ -1,26 +1,24 @@
 package models;
 
+import com.google.gson.annotations.SerializedName;
 import lombok.*;
 
-//@Setter
-//@Getter
-//@AllArgsConstructor //обязательно чтобы объект имел все параметры
 @NoArgsConstructor
-//@RequiredArgsConstructor //конструктор на основе обязательных (NonNull) полей
-//@ToString //инфа обо всех полях и их значенияхю удобно, когда используешь JavaFaker,чтоб получить значения
-//@EqualsAndHashCode
-@Data //заменяет Getter, Setter, equals, hashCode
+@Data
 public class Milestone {
-    @EqualsAndHashCode.Exclude //убрать это поле из сравнения
+    @EqualsAndHashCode.Exclude
     private int id;
 
-    @NonNull //это параметр становится обязательным
+    @NonNull
     private String name;
 
+    @SerializedName(value = "refs")
     private String references;
+
     private String description;
 
     @ToString.Exclude //убрать из to string
+    @SerializedName(value = "is_completed")
     private boolean completed;
 
 
