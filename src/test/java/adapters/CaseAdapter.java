@@ -2,6 +2,7 @@ package adapters;
 
 import io.restassured.mapper.ObjectMapperType;
 import models.Case;
+import models.CaseBuilder;
 import org.apache.http.HttpStatus;
 import utils.Endpoints;
 
@@ -9,7 +10,7 @@ import static io.restassured.RestAssured.given;
 
 public class CaseAdapter extends BaseAdapter{
 
-    public Case add(Case theCase, int sectionID) {
+    public CaseBuilder add(CaseBuilder theCase, int sectionID) {
 
         return given()
                 .body(theCase, ObjectMapperType.GSON)
@@ -21,7 +22,7 @@ public class CaseAdapter extends BaseAdapter{
                 .log().body()
                 .statusCode(HttpStatus.SC_OK)
                 .extract()
-                .as(Case.class);
+                .as(CaseBuilder.class);
     }
 
        public Case getCase(int caseID) {

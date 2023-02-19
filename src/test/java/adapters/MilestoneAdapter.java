@@ -3,6 +3,7 @@ package adapters;
 import io.restassured.mapper.ObjectMapperType;
 import io.restassured.response.Response;
 import models.Milestone;
+import models.MilestoneBuilder;
 import org.apache.http.HttpStatus;
 import utils.Endpoints;
 
@@ -10,7 +11,7 @@ import static io.restassured.RestAssured.given;
 
 public class MilestoneAdapter extends BaseAdapter{
 
-    public Response add(Milestone milestone, int projectID) {
+    public Response add(MilestoneBuilder milestone, int projectID) {
 
         return given()
                 .body(milestone, ObjectMapperType.GSON)

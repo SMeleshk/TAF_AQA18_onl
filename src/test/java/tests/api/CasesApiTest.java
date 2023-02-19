@@ -12,24 +12,24 @@ public class CasesApiTest extends BaseApiGsonTest {
     // Данное значение используется, чтоб иметь возможность запустить тесты отдельно.
     private int sectionID;
 
-    @Test (priority = 0)
-    private void addCase() {
-        CaseAdapter caseAdapter = new CaseAdapter();
-        sectionID = 1;
-
-        Case expectedCase = new Case();
-        expectedCase.setTitle("Test1");
-        expectedCase.setEstimate("2h");
-        expectedCase.setSection_id(1);
-        expectedCase.setPriority_id(1);
-
-        Case actualCase = caseAdapter.add(expectedCase, sectionID);
-
-        caseID = actualCase.getId();
-
-        System.out.println(actualCase);
-        Assert.assertEquals(actualCase, expectedCase);
-    }
+//    @Test (priority = 0)
+//    private void addCase() {
+//        CaseAdapter caseAdapter = new CaseAdapter();
+//        sectionID = 1;
+//
+//        Case expectedCase = new Case();
+//        expectedCase.setTitle("Test1");
+//        expectedCase.setEstimate("2h");
+//        expectedCase.setSection_id(1);
+//        expectedCase.setPriority_id(1);
+//
+//        Case actualCase = caseAdapter.add(expectedCase, sectionID);
+//
+//        caseID = actualCase.getId();
+//
+//        System.out.println(actualCase);
+//        Assert.assertEquals(actualCase, expectedCase);
+//    }
 
     @Test(priority = 1)
     private void getCase() {

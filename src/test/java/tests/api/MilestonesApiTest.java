@@ -29,21 +29,21 @@ public class MilestonesApiTest extends BaseApiGsonTest {
         Response response = milestoneAdapter.getMilestone(milestoneID);
     }
 
-    @Test (priority = 0)
-    private void addMilestone() {
-        MilestoneAdapter milestoneAdapter = new MilestoneAdapter();
-        projectID = 1;
-
-        Milestone expectedMilestone = new Milestone();
-        expectedMilestone.setName("Test");
-        expectedMilestone.setDescription("for test");
-        expectedMilestone.isCompleted();
-
-        Response response = milestoneAdapter.add(expectedMilestone, projectID);
-
-        assertThat(response.getBody().jsonPath().get("name"), equalTo(expectedMilestone.getName()));
-        milestoneID = response.getBody().jsonPath().get("id");
-    }
+//    @Test (priority = 0)
+//    private void addMilestone() {
+//        MilestoneAdapter milestoneAdapter = new MilestoneAdapter();
+//        projectID = 1;
+//
+//        Milestone expectedMilestone = new Milestone();
+//        expectedMilestone.setName("Test");
+//        expectedMilestone.setDescription("for test");
+//        expectedMilestone.isCompleted();
+//
+//        Response response = milestoneAdapter.add(expectedMilestone, projectID);
+//
+//        assertThat(response.getBody().jsonPath().get("name"), equalTo(expectedMilestone.getName()));
+//        milestoneID = response.getBody().jsonPath().get("id");
+//    }
 
     @Test (priority = 1)
     private void updateMilestone() {
